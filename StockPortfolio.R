@@ -2,8 +2,8 @@
 
 
 # Download the 3 data set, and lable them 
-#   ROC, GIL, MOD. These data sets reperesnet daily prices 
-#   of three chryptocurrencies: roche, Litcoin, and Ethereum. 
+#   ROC, GIL, MOD. These data sets reperesent daily prices 
+#   of three pharma companies
 #   Set the first column in each data set to the date format 
 #   and the remaining columns in numerical format.
 
@@ -52,8 +52,7 @@ attr(MDRRet,"time")	<-	date
 
 PriceDates	<-	as.character(format(as.POSIXct(attr(ROCRet,	"time")),"%Y-%m-%d"))
 
-#7) Create time seriese called BTCReturns by using BTCRet varible 
-#   and timeSeries() function
+
 
 ROCReturns	<-	timeSeries(ROCRet,	charvec	=	PriceDates)
 GILReturns	<-	timeSeries(GILRet,	charvec	=	PriceDates)
